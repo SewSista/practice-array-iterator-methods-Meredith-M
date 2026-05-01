@@ -49,21 +49,55 @@ let scores = [85, 70, 95, 60, 75];
 
 */
 
-let fruits = ["apple", "banana", "cherry"];
+/*Task 1 program: */
+let fruits = ["apple", "banana", "cherry"]; // starting array
+console.log("Requested fruits: ", fruits); // output: ["apple", "banana", "cherry"]
 
+  let addOrange = fruits.push("orange"); // adds "orange" to the end of the array
+  let removeApple = fruits.shift(); // removes "apple" from the beginning of the array
+  let addGrape = fruits.unshift("grape"); // adds "grape" to the beginning of the array
 
+console.log("Fruits in stock: ", fruits); // output: ["grape", "banana", "cherry", "orange"]
 
-let colors = ["red", "blue", "green", "blue", "yellow"];
+/*Task 2 program: */
+let colors = ["red", "blue", "green", "blue", "yellow"]; // starting array
+console.log("Colors: ", colors); // output: ["red", "blue", "green", "blue", "yellow"]  
 
+  let includesResult = (colors.includes("blue")); // output: true
+  let firstIndex = (colors.indexOf("blue")); // output: 1
+  let lastIndex = (colors.lastIndexOf("blue"));// output: 3
 
+console.log("Colors include 'blue': ", [includesResult, firstIndex, lastIndex]); // output true, 1, 3
 
-let teamA = ["Alice", "Bob"];
-let teamB = ["Charlie", "Diana"];
+/*Task 3 program: */
+let teamA = ["Alice", "Bob"]; // first team array
+let teamB = ["Charlie", "Diana"]; // second team array
 
+console.log("Team A: ", teamA); // output: ["Alice", "Bob"]
+console.log("Team B: ", teamB); // output: ["Charlie", "Diana"]
 
+  let allTeams = teamA.concat(teamB); // combines teamA and teamB into a new array
+    allTeams.push("Eve"); // adds "Eve" to the end of the allTeams array
 
+console.log("All Players: ", allTeams); // output: ["Alice", "Bob", "Charlie", "Diana"]
+
+/*Task 4 program: */
 let numbers = [10, 20, 30, 40, 50];
+console.log("Numbers array: ", numbers); // output: [10, 20, 30, 40, 50]
+
+  let middleNumbers = numbers.slice(1, 3); // new array with values from index 1 to 2
+  let modifiedNumbers = numbers.splice(0,3,); // removes 3 elements starting from index 0
+    modifiedNumbers.splice(3,0,60,70); // adds 60 and 70 starting at indes 3
 
 
+console.log("Middle Numbers: ", middleNumbers); // output: [20, 30]
+console.log("Modified Numbers: ", modifiedNumbers); // output: [10, 20, 30, 60, 70]
 
+/*Task 5 program: */
 let scores = [85, 70, 95, 60, 75];
+console.log("Scores: ", scores); // output: [85, 70, 95, 60, 75]
+
+  let sortedScores = scores.sort((a, b) => a - b); // sorts the scores in ascending order
+    sortedScores.reverse(); // reverses the sorted array to get descending order
+
+console.log("Sorted Scores: ", sortedScores); // output: [95, 85, 75, 70, 60]
